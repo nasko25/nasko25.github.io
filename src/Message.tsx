@@ -1,15 +1,8 @@
 import { Html } from "@react-three/drei";
-import { useThree } from "@react-three/fiber";
 import { Drill } from "lucide-react";
-import { Vector3 } from "three";
 
 export default function Message() {
-  //   const { viewport } = useThree();
   return (
-    // <group
-    //     position={[-viewport.width / 3.5, viewport.height / 3.8, -5]}
-    //   rotation={[0, 0, 0]}
-    // >
     <>
       <Html
         center

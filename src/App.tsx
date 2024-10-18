@@ -1,57 +1,14 @@
-import { Stars, Stage, Plane, OrbitControls, Text } from "@react-three/drei";
+import { Stars, OrbitControls } from "@react-three/drei";
 
 import Message from "./Message";
-import { Canvas, useThree } from "@react-three/fiber";
-import { Physics, RigidBody } from "@react-three/rapier";
-import {
-  Gltf,
-  Environment,
-  Fisheye,
-  KeyboardControls,
-} from "@react-three/drei";
-import Controller from "ecctrl";
-import { Euler, Group, Object3DEventMap, Vector3 } from "three";
-import { useEffect, useRef } from "react";
+import { Canvas } from "@react-three/fiber";
+import { Physics } from "@react-three/rapier";
+import { Vector3 } from "three";
 import Ghost from "./Ghost";
 
-var interval: number;
-
 function App() {
-  // const keyboardMap = [
-  //   { name: "forward", keys: ["ArrowUp", "KeyW"] },
-  //   { name: "backward", keys: ["ArrowDown", "KeyS"] },
-  //   { name: "leftward", keys: ["ArrowLeft", "KeyA"] },
-  //   { name: "rightward", keys: ["ArrowRight", "KeyD"] },
-  //   { name: "jump", keys: ["Space"] },
-  //   { name: "run", keys: ["Shift"] },
-  // ];
-  const ghost = useRef<Group<Object3DEventMap> | null>(null);
-
-  // useEffect(() => {
-  //   if (!interval)
-  //     interval = setInterval(() => {
-  //       if (ghost.current) {
-  //         ghost.current.position.y += 0.001;
-  //         ghost.current.position.z -= 0.001;
-  //       }
-  //     }, 100);
-  // }, []);
-
   return (
-    // <Canvas>
-    //   <Stage>
-    //     <Stars
-    //       radius={100}
-    //       depth={50}
-    //       count={5000}
-    //       factor={4}
-    //       saturation={0}
-    //       // fade
-    //       speed={1}
-    //     />
-    //   </Stage>
-    // </Canvas>
-
+    // can lock the pointer until user presses ESC with:
     // <Canvas shadows onPointerDown={(e) => e.target.requestPointerLock()}>
     <Canvas
       shadows

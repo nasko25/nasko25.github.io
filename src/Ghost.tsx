@@ -14,7 +14,6 @@ export default function Ghost() {
         // position={[0, 0, -4]}
         position={[0, -5.5, -4]} // without the <group> and when <Fisheye> is used
         rotation={new Euler(-0.8, 0.12, 0.2)}
-        //   ref={ghost}
         src="/ghost_w_tophat-transformed.glb"
       />
     </group>
